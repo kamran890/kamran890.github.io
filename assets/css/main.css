@@ -1742,6 +1742,14 @@ input, select, textarea {
 			margin-bottom: 0;
 		}
 
+ 
+/* Image */
+
+	md-block {
+		white-space: pre;
+		font-family: monospace; 
+	}
+
 /* Image */
 
 	.image {
@@ -2248,7 +2256,6 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				background-color: #81918E;
 				background-image: url("../../images/banner.jpg");
 			}
 
@@ -2272,6 +2279,17 @@ input, select, textarea {
 				width: 400px;
 			}
 
+		/* text */
+			.bg-text {
+			  background-color: rgb(0,0,0); /* Fallback color */
+			  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+			  color: white;
+			  font-weight: bold;
+			  z-index: 2;
+			  width: 80%;
+			  padding: 20px;
+			  height: 364px;
+			}
 /* Wide */
 
 	@media screen and (min-width: 961px) and (max-width: 1880px) {
