@@ -213,7 +213,7 @@ input, select, textarea {
 /* Container */
 
 	.container {
-		margin: 0 auto;
+		margin: 20px auto;
 		max-width: 100%;
 		width: 1400px;
 	}
@@ -2695,3 +2695,42 @@ input, select, textarea {
 				width: 100%;  /* Full width on mobile */
 			}
 	}
+
+/* tabs */
+
+/* Container for tabs */
+.tab {
+    display: flex; /* Use flexbox to align tabs inline */
+    justify-content: start; /* Align tabs at the start of the container */
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Styles for the tab buttons */
+.tab label {
+	position: absolute;
+	top: 10px;
+	cursor: pointer;
+	color: #333;
+   	text-transform: uppercase;
+}
+
+/* Hide the actual radio buttons */
+.tab [type=radio] {
+    display: none;   
+}
+
+/* Initially hide all tab content */
+.tab__content {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+}
+
+
+/* Adjustments for each specific tab label if needed */
+#software-label { transform: translateX(10%); }
+#embedded-label { transform: translateX(130%); } /* This is the center tab */
+#hackathon-label { transform: translateX(200%); }

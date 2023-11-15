@@ -27,10 +27,10 @@
                     <!-- Nav -->
                         <nav id="nav">
                             <ul>
-                                <li><a href="/#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-                                <li><a href="/#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-                                <li><a href="/blog.html" id="about-link"><span class="icon solid fa-user">Blog</span></a></li>
-                                <li><a href="/#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                                <li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+                                <li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+                                <li><a href="blog.html" id="about-link"><span class="icon solid fa-user">Blog</span></a></li>
+                                <li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
                             </ul>
                         </nav>
 
@@ -45,33 +45,61 @@
         <!-- Main -->
             <div id="main">
 
-                <!-- Blog -->
                 <section id="blog" class="three">
                     <div class="container">
-                        <!-- 2nd Blog Post -->
-                        <article class="blog-post">
-                            <header class="post-header">
-                                <h2>Junction 2023</h2>
-                                <p>Date: 13-11-2023</p>
-                            </header>
-                            <div class="post-content">
-                                <zero-md src="blog/post2.md" style="text-align: left;"></zero-md>
-                            </div>
-                        </article>
-                        <!-- First Blog Post -->
-                        <article class="blog-post">
-                            <header class="post-header">
-                                <h2>Article: Factory Design Pattern</h2>
-                                <p>Date: 18-10-2023</p>
-                            </header>
-                            <div class="post-content">
-                                <zero-md src="blog/post1.md" style="text-align: left;"></zero-md>
-                            </div>
-                        </article>
+                        <div data-tabs class="tabs">    
+                           <div class="tab">
+                              <input type="radio" name="tabgroup" id="software" checked>
+                              <label id="software-label" for="software">Software</label>
 
+                                <div class="tab__content">
+                                    <!-- First Software Blog Post -->
+                                    <article class="blog-post">
+                                        <header class="post-header">
+                                            <h2>Article: Factory Design Pattern</h2>
+                                            <p>Date: 18-10-2023</p>
+                                        </header>
+                                        <div class="post-content">
+                                            <zero-md src="blog/software/post1.md" style="text-align: left;"></zero-md>
+                                        </div>
+                                    </article>
+                                </div>
+                           </div>
+                           <div class="tab">
+                              <input type="radio" name="tabgroup" id="embedded">
+                              <label  id="embedded-label" for="embedded">Embedded</label>
+                                <div class="tab__content">
+                                    <!-- First Embedded Blog Post -->
+                                    <article class="blog-post">
+                                        <header class="post-header">
+                                            <h2>BusyBox</h2>
+                                            <p>Date: 15-11-2023</p>
+                                        </header>
+                                        <div class="post-content">
+                                            <zero-md src="blog/embedded/post1.md" style="text-align: left;"></zero-md>
+                                        </div>
+                                    </article>
+                                </div>
+                           </div>
+                           <div class="tab">
+                              <input type="radio" name="tabgroup" id="hackathon">
+                              <label  id="hackathon-label" for="hackathon">Hackathons</label>
+                                <div class="tab__content">
+                                    <!-- First Hackathon Blog Post -->
+                                    <article class="blog-post">
+                                        <header class="post-header">
+                                            <h2>Junction 2023</h2>
+                                            <p>Date: 13-11-2023</p>
+                                        </header>
+                                        <div class="post-content">
+                                            <zero-md src="blog/hackathon/post1.md" style="text-align: left;"></zero-md>
+                                        </div>
+                                    </article>
+                                </div>
+                           </div>
+                        </div>
                     </div>
                 </section>
-
             </div>
 
         <!-- Footer -->

@@ -14,44 +14,43 @@ Before diving into the hackathon, I immersed myself in Helsinki's rich culture. 
 
 <p align="center">
   <img src="../images/blog/junction/culture2.jpg" style="width:50%;" alt="culture2"/><br>
-  <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a>
+  <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a></i>
 </p>
 <p align="center">
   <img src="../images/blog/junction/culture1.JPEG" style="width:50%;" alt="culture1"/><br>
-  <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a>
+  <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a></i>
 </p>
 <p align="center">
   <img src="../images/blog/junction/library.jpg" style="width:50%;" alt="library"/><br>
-  <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a>
+  <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a></i>
 </p>
 
 The Central Library, an architectural marvel, was a highlight with its impressive facilities and even a spot for a friendly game of chess
 
 <p align="center">
   <img src="../images/blog/junction/chess.JPEG" style="width:50%;" alt="chess"/><br>
-  <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a>
-.</i>
+  <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a></i>
 </p>
 
 The Junction event unfolded in the historic Cable Factory in Ruoholahti. This former cable production site, turned cultural hotspot, perfectly symbolized the fusion of past and future, setting the stage for our innovative endeavors.
 
 <p align="center">
   <img src="../images/blog/junction/junction.jpg" style="width:50%;" alt="junction"/><br>
-  <i class="photo-credit">Photo by <a href="https://www.hackjunction.com/">Junction</a>
+  <i class="photo-credit">Photo by <a href="https://www.hackjunction.com/">Junction</a></i>
 </p>
 
 Joining a random team was a leap into a pool of diverse knowledge and backgrounds.
 
 <p align="center">
   <img src="../images/blog/junction/team_search.jpg" style="width:50%;" alt="team_search"/><br>
-  <i class="photo-credit">Photo by <a href="https://www.hackjunction.com/">Junction</a>
+  <i class="photo-credit">Photo by <a href="https://www.hackjunction.com/">Junction</a></i>
 </p>
 
 Our challenge? Harnessing generative AI sustainably to derive real-time business insights. This experience underscored the beauty of working with an international team, learning, adapting, and growing together.
 
 <p align="center">
   <img src="../images/blog/junction/team.jpg" style="width:50%;" alt="team"/><br>
-  <i class="photo-credit">Photo by <a href="https://www.hackjunction.com/">Junction</a>
+  <i class="photo-credit">Photo by <a href="https://www.hackjunction.com/">Junction</a></i>
 </p>
 
 The following days were a whirlwind of creativity and fun. We developed an application, crafted a compelling story, and even produced a video. Witness our journey and the fruits of our work here:

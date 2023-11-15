@@ -120,4 +120,43 @@
 					visibleClass: 'header-visible'
 				});
 
+	// tabs
+	function showTab(hash) {
+		var found = false;
+
+		$('.tab').each(function() {
+			var content = $(this).find('.tab__content');
+			var labelFor = $(this).find('label').attr('for');
+
+			if (hash && ('#' + labelFor) === hash) {
+				content.show();
+				$(this).find('label').css({ 'border-bottom': '2px solid #1d1d1d', 'color': '#1d1d1d' });
+				found = true;
+			} else {
+				content.hide();
+				$(this).find('label').css({ 'border-bottom': 'none', 'color': '#333' });
+			}
+		});
+
+		if (!found) {
+			$('.tab').first().find('.tab__content').show();
+			$('.tab').first().find('label').css({ 'border-bottom': '2px solid #1d1d1d', 'color': '#1d1d1d' });
+		}
+	}
+
+	// Show the tab based on the current URL hash
+	showTab(window.location.hash);
+
+	// Click event for each tab
+	$('.tab label').click(function() {
+		var labelFor = $(this).attr('for');
+		window.location.hash = labelFor;
+		showTab('#' + labelFor);
+	});
+
+	// Handle hash change in URL
+	$(window).on('hashchange', function() {
+		showTab(window.location.hash);
+	});
+
 })(jQuery);
