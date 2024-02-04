@@ -2734,3 +2734,4 @@ input, select, textarea {
 #software-label { transform: translateX(10%); }
 #embedded-label { transform: translateX(130%); } /* This is the center tab */
 #hackathon-label { transform: translateX(200%); }
+#wanderlust-label { transform: translateX(310%); }

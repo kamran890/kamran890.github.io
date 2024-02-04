@@ -1,37 +1,46 @@
 # Understanding the Factory Design Pattern in Python
 
-The Factory Design Pattern is one of the most widely recognized and used design patterns in software development. It belongs to the creational group of patterns, which deals with the process of object creation. At its core, the Factory Pattern provides an interface for creating objects but allows subclasses to alter the types of objects that are created.
+The Factory Method Pattern encapsulates the object creation process by defining an interface for generating objects, thereby separating the instantiation from the client code.
 
-## Why Use the Factory Pattern?
 
-Imagine you're setting up a furniture shop. Instead of crafting each piece of furniture on-the-spot upon a customer's request, you'd likely have a more streamlined process. You'd have templates or molds for each type of furniture, ensuring efficiency, consistency, and quality. 
-
-Similarly, in software, the Factory Pattern acts as a 'mold' to create objects. It provides several advantages:
-
-1. **Decoupling:** The code that requests an object is decoupled from the code that creates it. This separation of concerns leads to more modular and maintainable code.
-2. **Flexibility:** Factories allow easy integration of new object types without changing the client code.
-3. **Consistency:** Ensures that objects are created consistently, following specific rules or standards.
-
-## Simple Factory in Python
-
-Let's start with a basic example. Suppose we're building a drawing application that supports various shapes.
+## Simple Example in python:
 
 ```python
-class Circle:
+class Shape:
     def draw(self):
-        return "Drawing a circle!"
+        pass
 
-class Square:
+class Circle(Shape):
     def draw(self):
-        return "Drawing a square!"
+        print("Drawing a Circle")
+
+class Square(Shape):
+    def draw(self):
+        print("Drawing a Square")
+
+class Rectangle(Shape):
+    def draw(self):
+        print("Drawing a Rectangle")
 
 class ShapeFactory:
-    @staticmethod
-    def get_shape(shape_type):
-        if shape_type == "circle":
+    def create_shape(self, shape_type):
+        if shape_type == "Circle":
             return Circle()
-        elif shape_type == "square":
+        elif shape_type == "Square":
             return Square()
         else:
-            raise ValueError("Shape type not recognized!")
+            raise ValueError("Unknown Shape type")
+
+# Client code
+factory = ShapeFactory()
+
+user_shape = input("Enter shape")
+shape1 = factory.create_shape(user_shape)
+shape1.draw()
 ```
+
+## Problem Solved
+
+1. The above example demonstrates dynamic, user input-driven object creation, enhancing runtime flexibility and adaptability in shape creation.
+
+2. Extending the code with new shapes involves only changes to the factory, not the client code, streamlining maintenance and scalability.
