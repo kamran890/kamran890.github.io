@@ -80,7 +80,7 @@ Significant progress has been made, including:
 
     <p align="center">
         <img src="../images/blog/smart-rule-engine/thingsboard_heating.png" style="width:50%;" alt="thingsboard_heating"/><br>
-        <i>Figure 7: Meeting Room 1 Device on Thingsboard</i>
+        <i>Figure 6: Meeting Room 1 Device on Thingsboard</i>
     </p>
 
     We can see in above figure that Heat Relay of Meeting 1 is turned on.
@@ -89,14 +89,14 @@ Significant progress has been made, including:
 
     <p align="center">
         <img src="../images/blog/smart-rule-engine/simulate_temperature_76.png" style="width:50%;" alt="simulate_temperature_76"/><br>
-        <i>Figure 6: Simulating temperature as 76 degrees</i>
+        <i>Figure 7: Simulating temperature as 76 degrees</i>
     </p>
 
     We know that based on rule chain we created, now cooling shall be turned on. Let's see in Thingsboard.
 
     <p align="center">
         <img src="../images/blog/smart-rule-engine/thingsboard_cooling.png" style="width:50%;" alt="thingsboard_cooling"/><br>
-        <i>Figure 7: Meeting Room 1 Device on Thingsboard</i>
+        <i>Figure 8: Meeting Room 1 Device on Thingsboard</i>
     </p>
 
     We can see in above figure that Cool Relay of Meeting 1 is turned on.
@@ -113,7 +113,7 @@ Significant progress has been made, including:
 
     <p align="center">
         <img src="../images/blog/smart-rule-engine/list.png" style="width:50%;" alt="list"/><br>
-        <i>Figure 6: List Rule Chains</i>
+        <i>Figure 9: List Rule Chains</i>
     </p>
 
 * Updating Rule Chain
@@ -128,7 +128,7 @@ Significant progress has been made, including:
 
     <p align="center">
         <img src="../images/blog/smart-rule-engine/update.png" style="width:50%;" alt="update"/><br>
-        <i>Figure 5: Update Rule Chain</i>
+        <i>Figure 10: Update Rule Chain</i>
     </p>
 
 * Deleting Rule Chain
@@ -143,7 +143,7 @@ Significant progress has been made, including:
 
     <p align="center">
         <img src="../images/blog/smart-rule-engine/delete.png" style="width:50%;" alt="delete"/><br>
-        <i>Figure 6: Delete Rule Chain</i>
+        <i>Figure 11: Delete Rule Chain</i>
     </p>
 
 
