@@ -1,12 +1,12 @@
-I’m excited to introduce my latest project, Smart Rule Engine, a generative AI-powered rule engine that leverages the advanced capabilities of GPT-4 to provide a seamless, chat-based interface for managing rule engines in IoT platforms. Currently, Smart Rule Engine integrates with Thingsboard, a popular IoT platform, with plans to support additional platforms in the near future.
+I’m excited to introduce my latest project, Chat2IoT, a generative AI-powered rule engine that leverages the advanced capabilities of GPT-4 to provide a seamless, chat-based interface for managing rule engines in IoT platforms. Currently, Chat2IoT integrates with Thingsboard, a popular IoT platform, with plans to support additional platforms in the near future.
 
-Smart Rule Engine will be offered as a SaaS-based service soon, hosted on the cloud. Users can easily sign up, integrate their IoT platforms, and begin managing their rule engines, all through a simple and intuitive chat interface.
+Chat2IoT will be offered as a SaaS-based service soon, hosted on the cloud. Users can easily sign up, integrate their IoT platforms, and begin managing their rule engines, all through a simple and intuitive chat interface.
 
 ## How It Works
 
 * Sign-Up & Integration:
 
-    While signing up, users can connect their IoT platform to Smart Rule Engine. The tool automatically pulls relevant data from the platform, including information about connected devices and the parameters those devices can control.
+    While signing up, users can connect their IoT platform to Chat2IoT. The tool automatically pulls relevant data from the platform, including information about connected devices and the parameters those devices can control.
 
     <p align="center">
         <img src="../images/blog/smart-rule-engine/signup.png" style="width:50%;" alt="signup"/><br>
@@ -25,7 +25,7 @@ Smart Rule Engine will be offered as a SaaS-based service soon, hosted on the cl
 
 * Chat Interface:
 
-    The core of Smart Rule Engine is its chat-based management system. Through this interface, users can effortlessly manage their rule engines. For example, users can ask the system to list all existing rule engines, create new ones, or modify or delete existing ones.
+    The core of Chat2IoT is its chat-based management system. Through this interface, users can effortlessly manage their rule engines. For example, users can ask the system to list all existing rule engines, create new ones, or modify or delete existing ones.
 
     <p align="center">
         <img src="../images/blog/smart-rule-engine/chat.png" style="width:50%;" alt="chat"/><br>
@@ -38,11 +38,11 @@ Significant progress has been made, including:
 
 * Signup and platform integration: Creating tenant and adding integration.
 
-* Puling data from IoT platform: A task manager for running periodic task that pull data from the connected IoT platform. This process retrieves information about devices and their parameters at regular intervals, ensuring that the data within Smart Rule Engine reflects the current state of the IoT platform environment.
+* Puling data from IoT platform: A task manager for running periodic task that pull data from the connected IoT platform. This process retrieves information about devices and their parameters at regular intervals, ensuring that the data within Chat2IoT reflects the current state of the IoT platform environment.
 
 * AI Integration: Integrating GPT-4 and prompt engineering
 
-* Rule Engine Management: Creating, modifying, and deleting rule engines through the chat interface. Smart Rule Engine understands user intent with the help of GPT-4 and perform actions accordingly.
+* Rule Engine Management: Creating, modifying, and deleting rule engines through the chat interface. Chat2IoT understands user intent with the help of GPT-4 and perform actions accordingly.
 
 * Data Subscrition: Subscribing to devices data from IoT platform over websockets.
 
@@ -62,7 +62,7 @@ Significant progress has been made, including:
         If the temperature in Meeting Room 1 is 2 degrees below the setpoint, turn on the heating mode and activate the heating relay for the HVAC system. If the temperature is 2 degrees above the setpoint, switch to cooling mode and activate the cooling relay. Otherwise, turn off both the heating and cooling relays. The setpoint is 73 degrees.
     </blockquote>
 
-    If any information is missing, the system will prompt the user for the necessary details. Once all the information is provided, Smart Rule Engine will rephrase the rule and ask the user for confirmation to ensure the intent is correctly captured. Upon confirmation, the rule is created and activated.
+    If any information is missing, the system will prompt the user for the necessary details. Once all the information is provided, Chat2IoT will rephrase the rule and ask the user for confirmation to ensure the intent is correctly captured. Upon confirmation, the rule is created and activated.
 
     <p align="center">
         <img src="../images/blog/smart-rule-engine/create.png" style="width:50%;" alt="create"/><br>
@@ -167,7 +167,7 @@ Looking ahead, several enhancements and extensions are planned:
 
 * Edge Case Handling: Addressing situations where GPT-4 might not fully understand user intent.
 
-* Expanding Capabilities: Exploring possibilities to extend Smart Rule Engine’s functionality to include reporting, device provisioning, dashboard creation, and ultimately controlling the entire IoT platform through the chat interface.
+* Expanding Capabilities: Exploring possibilities to extend Chat2IoT’s functionality to include reporting, device provisioning, dashboard creation, and ultimately controlling the entire IoT platform through the chat interface.
 
 
 ## Contributing to project
@@ -178,6 +178,12 @@ This is an open-source project, contributions are most welcome:
 * Bug Reports: Help us improve by reporting issues you encounter. Please provide as much detail as possible.
 * Patch Reviews: Review and provide feedback on other contributors' patches to ensure quality and consistency.
 
-Your contributions, no matter how small, are valued and help make Smart Rule Engine better for everyone
+Your contributions, no matter how small, are valued and help make Chat2IoT better for everyone
 
-Here is project repo: https://github.com/kamran890/smart-rule-engine
+Project repo: https://github.com/kamran890/smart-rule-engine
+
+Website: https://www.chat2iot.com/
+
+Demo: https://youtu.be/B74klnM6beU
+
+
