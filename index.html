@@ -1,282 +1,1857 @@
 <!DOCTYPE HTML>
-<!--
-    Prologue by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-    <head>
-        <title>Portfolio</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-    </head>
-    <body class="is-preload">
+  <head>
+    <title>Kamran | Software Engineer Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <!-- Base Theme Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-        <!-- Header -->
-            <div id="header">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-                <div class="top">
+    <!-- Custom Modern Styles -->
+    <style>
+      :root {
+        --bg: #050816;
+        --bg-alt: #0b1020;
+        --accent: #34d399;
+        --accent-soft: rgba(52, 211, 153, 0.12);
+        --accent-2: #60a5fa;
+        --text-main: #e5e7eb;
+        --text-muted: #9ca3af;
+        --card-bg: rgba(15, 23, 42, 0.9);
+        --card-border: rgba(148, 163, 184, 0.2);
+        --radius-lg: 18px;
+        --radius-full: 999px;
+        --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.55);
+        --shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.3);
+      }
 
-                    <!-- Logo -->
-                        <div id="logo">
-                            <h1 id="title">Kamran</h1>
-                            <p>Software Engineer</p>
-                        </div>
+      * {
+        box-sizing: border-box;
+      }
 
-                    <!-- Nav -->
-                        <nav id="nav">
-                            <ul>
-                                <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-                                <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-                                <li><a href="blog.html" id="blog-link"><span class="icon solid fa-user">Blog</span></a></li>
-                                <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-                            </ul>
-                        </nav>
+      body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+        color: var(--text-main);
+      }
 
+      /* SIDEBAR WRAPPER ------------------------------------------------ */
+
+      #header {
+        background: radial-gradient(circle at top, #020617, #020617 70%);
+        border-right: 1px solid rgba(148, 163, 184, 0.25);
+        box-shadow: 0 0 40px rgba(15, 23, 42, 0.9);
+      }
+
+      #header .top {
+        padding-top: 2.5rem;
+      }
+
+      #logo {
+        text-align: center;
+        padding: 1.8rem 1rem 1.2rem;
+      }
+
+      /* avatar */
+
+      #logo .avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        margin: 0 auto 0.9rem;
+        border: 2px solid rgba(148, 163, 184, 0.7);
+        overflow: hidden;
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.8);
+      }
+
+      #logo .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* name + role */
+
+      #logo #title {
+        font-size: 1.6rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+        background: linear-gradient(120deg, #38bdf8, #a855f7, #22c55e);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .role-line {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      /* small pills under name */
+
+      .sidebar-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem;
+        margin-top: 0.9rem;
+      }
+
+      .sidebar-pill {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        padding: 0.25rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.45);
+        color: var(--text-muted);
+        background: rgba(15, 23, 42, 0.9);
+      }
+
+      .sidebar-pill--accent {
+        border-color: rgba(52, 211, 153, 0.9);
+        color: #bbf7d0;
+      }
+
+      /* NAV ITEMS ------------------------------------------------------ */
+
+      #nav ul {
+        margin-top: 1.8rem;
+      }
+
+      #nav ul li a {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 0.55rem 1.8rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        border-left: 2px solid transparent;
+        transition: color 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+      }
+
+      #nav ul li a .icon {
+        width: 18px;
+        display: inline-flex;
+        justify-content: center;
+      }
+
+      #nav ul li a .nav-label {
+        flex: 1;
+      }
+
+      /* hover + active */
+
+      #nav ul li a:hover {
+        background: linear-gradient(90deg, rgba(15, 23, 42, 0.9), transparent);
+        color: #e5e7eb;
+      }
+
+      #nav ul li a.active {
+        border-left-color: #22c55e;
+        background: linear-gradient(90deg, rgba(34, 197, 94, 0.15), transparent);
+        color: #f9fafb;
+      }
+
+      /* SOCIAL ICONS --------------------------------------------------- */
+
+      #header .bottom {
+        padding: 1.4rem 0 1.6rem;
+      }
+
+      .sidebar-social {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar-social a {
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        background: rgba(15, 23, 42, 0.95);
+        transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+      }
+
+      .sidebar-social a:hover {
+        transform: translateY(-1px);
+        border-color: rgba(56, 189, 248, 0.9);
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
+        color: #e5e7eb;
+      }
+
+      /* RESPONSIVE: collapse sidebar on small screens ----------------- */
+
+      @media screen and (max-width: 980px) {
+        #header {
+          position: fixed;
+          width: 100%;
+          height: auto;
+          border-right: none;
+          border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+          z-index: 1000;
+        }
+
+        #header .top {
+          padding-top: 1rem;
+        }
+
+        #logo .avatar {
+          display: none; /* optional: hide avatar on small screens for more space */
+        }
+
+        #logo {
+          padding-bottom: 0.6rem;
+        }
+
+        #nav ul {
+          display: flex;
+          justify-content: center;
+          margin-top: 0.6rem;
+        }
+
+        #nav ul li a {
+          padding: 0.4rem 0.9rem;
+          border-left: none;
+        }
+
+        #header .bottom {
+          display: none; /* hide social row on very small screens if needed */
+        }
+      }
+
+
+    /* HERO CARD ------------------------------------------------------ */
+
+    #top.one.dark.cover {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 5rem 1.5rem;
+      background: radial-gradient(circle at top left, rgba(59,130,246,.35), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(45,212,191,.22), transparent 55%),
+                  linear-gradient(180deg,#020617 0%,#020617 45%,#020617 100%);
+    }
+
+    #top .container {
+      max-width: 930px;
+      min-height: 480px;
+      margin-inline: auto;
+      background: radial-gradient(circle at top, #0b1120, #020617 65%);
+      border-radius: 24px;
+      padding: 2.8rem 2.4rem 3.4rem;   /* more bottom padding */
+      border: 1px solid rgba(148,163,184,0.3);
+      box-shadow: 0 24px 60px rgba(15,23,42,0.75);
+      position: relative;
+      /* allow big rounded CTA to be fully visible */
+      overflow: visible;
+    }
+
+      #top .container::before {
+        content: "";
+        position: absolute;
+        inset: -30%;
+        opacity: 0.08;
+        background-image: radial-gradient(circle, #22c55e 1px, transparent 0);
+        background-size: 42px 42px;
+        mix-blend-mode: screen;
+        pointer-events: none;
+      }
+
+      #top header {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 1.5rem;
+      }
+
+      #top h2.alt {
+        font-size: clamp(2.3rem, 3vw, 2.8rem);
+        margin-bottom: 0.75rem;
+      }
+
+      #top h2.alt::after {
+        content: "";
+        display: block;
+        width: 66px;
+        height: 3px;
+        border-radius: 999px;
+        margin-top: 0.75rem;
+        background: linear-gradient(90deg, #22c55e, #38bdf8);
+      }
+
+      #top p {
+        font-size: 1rem;
+        color: var(--text-muted);
+        max-width: 32rem;
+        line-height: 1.7;
+      }
+
+      #top .hero-badges {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.6rem 0 2.1rem;
+      }
+
+      .hero-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: var(--radius-full);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+        background: rgba(15, 23, 42, 0.8);
+        backdrop-filter: blur(10px);
+      }
+
+      .hero-badge--accent {
+        border-color: rgba(52, 211, 153, 0.7);
+        color: #bbf7d0;
+        background: radial-gradient(circle at top left, rgba(52, 211, 153, 0.22), #020617);
+      }
+
+      #top footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 0.5rem;
+      }
+
+    /* BUTTONS -------------------------------------------------------- */
+
+    .button,
+    .fixed-width-button {
+      border-radius: 999px !important;
+      border-width: 1px !important;
+      padding: 0.9rem 1.9rem !important;
+      font-size: 0.9rem !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-width: 190px;                 /* consistent width */
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    /* primary CTA */
+    .button.scrolly {
+      background: linear-gradient(135deg, #22c55e, #38bdf8);
+      border: none !important;
+      color: #020617 !important;
+      box-shadow: 0 16px 40px rgba(34,197,94,0.65);
+      transform: translateY(0);
+      transition: transform 0.16s ease-out, box-shadow 0.16s ease-out, filter 0.16s ease-out;
+    }
+
+    .button.scrolly:hover {
+      filter: brightness(1.05);
+      transform: translateY(-2px);
+      box-shadow: 0 20px 48px rgba(34,197,94,0.8);
+    }
+
+    /* secondary CTA */
+    .button.secondary {
+      background: rgba(15,23,42,0.95);
+      border: 1px solid rgba(148,163,184,0.7) !important;
+      color: #e5e7eb !important;
+      box-shadow: 0 12px 32px rgba(15,23,42,0.6);
+    }
+
+    .button.secondary:hover {
+      background: rgba(15,23,42,1);
+    }
+
+    /* hero footer layout */
+    #top footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 0.8rem;
+    }
+
+      /* ABOUT ------------------------------------------------------------- */
+
+      #about.three {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background: radial-gradient(circle at top right, #0f172a, #020617);
+      }
+
+      #about .container {
+        max-width: 960px;
+      }
+
+      #about header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+      }
+
+      #about header p {
+        color: var(--text-muted);
+        max-width: 640px;
+      }
+
+      .about-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+        gap: 2.3rem;
+        align-items: flex-start;
+        margin-top: 2rem;
+      }
+
+      .about-me-image {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(148, 163, 184, 0.32);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .about-me-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .about-text h3 {
+        font-size: 1.1rem;
+        margin: 1.1rem 0 0.3rem;
+      }
+
+      .about-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--text-muted);
+      }
+
+      .about-list {
+        margin: 0.4rem 0 0.9rem;
+        padding-left: 1.1rem;
+        list-style: none;
+      }
+
+      .about-list li {
+        position: relative;
+        padding-left: 0.9rem;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-bottom: 0.2rem;
+      }
+
+      .about-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55rem;
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #22c55e, #38bdf8);
+      }
+
+      .quote {
+        margin: 1.3rem 0;
+        font-size: 0.9rem;
+        color: #e5e7eb;
+        font-style: italic;
+        padding-left: 1rem;
+        border-left: 2px solid rgba(148, 163, 184, 0.7);
+      }
+
+      .about-cta {
+        margin-top: 1.4rem;
+      }
+
+      /* FOOTER ------------------------------------------------------------ */
+
+      #footer {
+        border-top: 1px solid rgba(148, 163, 184, 0.3);
+        background: #020617;
+      }
+
+      #footer .copyright {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      /* RESPONSIVE -------------------------------------------------------- */
+
+      @media screen and (max-width: 980px) {
+        #top .container {
+          min-height: 620px;
+          padding: 2.2rem 1.6rem 2rem;
+        }
+
+        .about-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .about-me-image {
+          max-width: 360px;
+          margin-inline: auto;
+        }
+      }
+
+    @media screen and (max-width: 736px) {
+      #top.one.dark.cover {
+        padding: 4.5rem 1.2rem 3.5rem;
+      }
+
+      #top footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button,
+      .fixed-width-button {
+        width: 100%;
+      }
+    }
+
+    /* PORTFOLIO – background & layout ------------------------------- */
+
+    #portfolio.two {
+      padding-top: 4rem;
+      padding-bottom: 4.2rem;
+      background: radial-gradient(circle at top center, #020617 0, #020617 55%, #020617);
+      position: relative;
+    }
+
+    #portfolio .container {
+      max-width: 1100px;
+    }
+
+    #portfolio header h2 {
+      font-size: 1.9rem;
+      margin-bottom: 0.35rem;
+    }
+
+    #portfolio header p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    /* subtle glow behind section */
+    #portfolio::before {
+      content: "";
+      position: absolute;
+      inset-inline: 15%;
+      top: -10%;
+      height: 40%;
+      background: radial-gradient(circle, rgba(56,189,248,0.18), transparent 70%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    /* Header bar + filters ----------------------------------------- */
+
+    .portfolio-header-bar {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.9rem;
+    }
+
+    .portfolio-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+
+    .portfolio-meta .meta-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle, #22c55e, #16a34a);
+      box-shadow: 0 0 12px rgba(34,197,94,0.9);
+    }
+
+    /* Filter pills */
+
+    .portfolio-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-pill {
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.92);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.95rem;
+      cursor: pointer;
+      transition: background 0.15s ease-out, border-color 0.15s, color 0.15s,
+        box-shadow 0.15s;
+    }
+
+    .filter-pill.is-active,
+    .filter-pill:hover {
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.22), #020617);
+      border-color: rgba(56,189,248,0.9);
+      color: #e5e7eb;
+      box-shadow: 0 0 16px rgba(37,99,235,0.5);
+    }
+
+    /* Project groups ----------------------------------------------- */
+
+    .portfolio-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.6rem;
+    }
+
+    .project-group {
+      position: relative;
+      background: radial-gradient(circle at top left, rgba(15,23,42,1), #020617);
+      border-radius: 22px;
+      border: 1px solid rgba(30,64,175,0.5);
+      box-shadow: 0 24px 50px rgba(15,23,42,0.9);
+      padding: 1.8rem 1.7rem 1.9rem;
+      overflow: hidden;
+    }
+
+    .project-group::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background-image: radial-gradient(circle, rgba(148,163,184,0.3) 1px, transparent 0);
+      background-size: 42px 42px;
+      opacity: 0.03;
+      pointer-events: none;
+    }
+
+    /* small gradient stripe like case-study cards */
+    .project-group::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 3px;
+      width: 100%;
+      background: linear-gradient(90deg, #22c55e, #38bdf8, #a855f7);
+      opacity: 0.85;
+    }
+
+    /* main layout */
+
+    .project-group-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+      gap: 1.8rem;
+      align-items: stretch;
+    }
+
+    /* Left content -------------------------------------------------- */
+
+    .project-content {
+      z-index: 1;
+    }
+
+    .project-kicker-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-kicker {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-2);
+    }
+
+    .project-badge {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.9);
+      color: var(--text-muted);
+    }
+
+    /* color-coded badges */
+    .project-badge--ai {
+      border-color: rgba(56,189,248,0.8);
+      color: #bfdbfe;
+    }
+    .project-badge--iot {
+      border-color: rgba(52,211,153,0.8);
+      color: #bbf7d0;
+    }
+    .project-badge--enterprise {
+      border-color: rgba(251,191,36,0.8);
+      color: #fef9c3;
+    }
+    .project-badge--product {
+      border-color: rgba(248,113,113,0.8);
+      color: #fee2e2;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      margin: 0 0 0.45rem;
+    }
+
+    .project-description {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.9rem;
+    }
+
+    /* tags ---------------------------------------------------------- */
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .project-tag {
+      padding: 0.22rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.4);
+      color: var(--text-muted);
+    }
+
+    .project-tag.highlight {
+      border-color: rgba(52,211,153,0.9);
+      color: #bbf7d0;
+    }
+
+    /* link + CTA ---------------------------------------------------- */
+
+    .project-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .project-link {
+      font-size: 0.84rem;
+      color: var(--accent-2);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .project-link::after {
+      content: "↗";
+      font-size: 0.8em;
+      opacity: 0.9;
+    }
+
+    .project-cta {
+      border-radius: 999px;
+      border: none;
+      padding: 0.55rem 1.35rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: linear-gradient(135deg, #22c55e, #38bdf8);
+      color: #020617;
+      box-shadow: 0 10px 30px rgba(34,197,94,0.7);
+      transition: transform 0.16s ease-out, box-shadow 0.16s ease-out,
+        filter 0.16s ease-out;
+    }
+
+    .project-cta:hover {
+      filter: brightness(1.05);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(34,197,94,0.85);
+    }
+
+    /* Right column (inline gallery) -------------------------------- */
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      background: radial-gradient(circle at top, #020617, #020617 80%);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(30,64,175,0.45);
+      box-shadow: var(--shadow-subtle);
+      transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
+        border-color 0.18s ease-out;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(52,211,153,0.7);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.95);
+    }
+
+    .project-card img {
+      transition: transform 0.25s ease-out;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .project-card header {
+      padding: 0.75rem 0.9rem 0.9rem;
+    }
+
+    .project-card header h3 {
+      font-size: 0.95rem;
+      margin: 0 0 0.1rem;
+    }
+
+    .project-card header p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Modal + Carousel --------------------------------------------- */
+
+    .project-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-modal.is-open {
+      display: flex;
+    }
+
+    .project-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(15,23,42,0.8), rgba(0,0,0,0.96));
+      backdrop-filter: blur(10px);
+    }
+
+    .project-modal-dialog {
+      position: relative;
+      z-index: 1;
+      width: min(900px, 96vw);
+      max-height: 92vh;
+      background: radial-gradient(circle at top left, #020617, #020617 70%);
+      border-radius: 24px;
+      border: 1px solid rgba(148,163,184,0.4);
+      padding: 1.5rem 1.7rem 1.6rem;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.9);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-modal-close {
+      position: absolute;
+      top: 0.9rem;
+      right: 1.1rem;
+      border: none;
+      background: rgba(15,23,42,0.9);
+      border-radius: 999px;
+      width: 30px;
+      height: 30px;
+      color: #e5e7eb;
+      cursor: pointer;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .project-modal-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .project-modal-kicker {
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+    }
+
+    .project-modal-title {
+      font-size: 1.35rem;
+      margin: 0.1rem 0 0.25rem;
+    }
+
+    .project-modal-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Carousel */
+
+    .project-modal-carousel {
+      position: relative;
+      border-radius: 18px;
+      border: 1px solid rgba(30,64,175,0.55);
+      overflow: hidden;
+      background: radial-gradient(circle at top, #020617, #020617 80%);
+      margin-bottom: 0.9rem;
+    }
+
+    .carousel-track {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-track img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 999px;
+      width: 32px;
+      height: 32px;
+      border: none;
+      background: rgba(15,23,42,0.85);
+      color: #e5e7eb;
+      cursor: pointer;
+      font-size: 1.3rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .carousel-nav--prev {
+      left: 0.7rem;
+    }
+
+    .carousel-nav--next {
+      right: 0.7rem;
+    }
+
+    /* caption text under carousel */
+    .project-modal-caption {
+      padding: 0.1rem 0.1rem 0;
+    }
+
+    .project-modal-caption h4 {
+      font-size: 0.95rem;
+      margin: 0 0 0.2rem;
+    }
+
+    .project-modal-caption p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+  /* hide modal template content in page */
+  .project-modal-content {
+    display: none;
+  }
+
+  /* bullet list styling (you already had similar, but keep/update this) */
+  .project-feature-list {
+    margin: 0.8rem 0 0;
+    padding-left: 1.2rem;
+    list-style: none;
+  }
+
+  .project-feature-list li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    margin-bottom: 0.35rem;
+    line-height: 1.55;
+  }
+
+  .project-feature-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22c55e, #38bdf8);
+    box-shadow: 0 0 6px rgba(56,189,248,0.6);
+  }
+
+  .default-carousel {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(30,64,175,0.45);
+  }
+
+  .default-carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  .default-carousel img.active {
+    opacity: 1;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+
+    /* Responsive tweaks -------------------------------------------- */
+
+    @media screen and (max-width: 980px) {
+      .project-group-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media screen and (max-width: 736px) {
+      .portfolio-header-bar {
+        align-items: flex-start;
+      }
+
+      .project-modal-dialog {
+        padding: 1.2rem 1.1rem 1.2rem;
+        border-radius: 18px;
+      }
+
+      .project-modal-carousel {
+        border-radius: 14px;
+      }
+    }
+
+    /* Responsive */
+
+    @media screen and (max-width: 980px) {
+      .project-group-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media screen and (max-width: 736px) {
+      .portfolio-header-bar {
+        align-items: flex-start;
+      }
+    }
+
+    </style>
+  </head>
+  <body class="is-preload">
+    <div id="header">
+      <div class="top">
+        <!-- Logo / avatar -->
+        <div id="logo">
+          <div class="avatar">
+            <img src="images/profile1.jpg" alt="Portrait of Kamran" />
+          </div>
+          <h1 id="title">Kamran</h1>
+          <p class="role-line">Software Engineer · IoT &amp; Web</p>
+
+          <div class="sidebar-meta">
+            <span class="sidebar-pill">Remote-first</span>
+            <span class="sidebar-pill sidebar-pill--accent">Open to opportunities</span>
+          </div>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="#top" id="top-link" class="active">
+                <span class="icon solid fa-home"></span>
+                <span class="nav-label">Intro</span>
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio" id="portfolio-link">
+                <span class="icon solid fa-th"></span>
+                <span class="nav-label">Portfolio</span>
+              </a>
+            </li>
+            <li>
+              <a href="blog.html" id="blog-link">
+                <span class="icon solid fa-blog"></span>
+                <span class="nav-label">Blog</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about" id="about-link">
+                <span class="icon solid fa-user"></span>
+                <span class="nav-label">About Me</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="bottom">
+        <ul class="sidebar-social">
+          <li>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener">
+              <i class="icon brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener">
+              <i class="icon brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:you@example.com">
+              <i class="icon solid fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Intro -->
+      <section id="top" class="one dark cover">
+        <div class="container">
+          <header>
+            <h2 class="alt">Hi, I'm Kamran</h2>
+            <p>
+              Let me tell you few things about me. I am a Software Engineer specialized in AI, Web Applications, IoT systems, and
+              Embedded Systems. I have an understanding of many domains of software developement and have always considered myself an architect, as i think the value of software developement was always in solving a problem and designing a solution not writing code itself. With AI agents, I consider myself now as AI agent manager who can architect, think critically and guide AI Agents to solve problems and build solutions.
+            </p>
+          </header>
+
+          <div class="hero-badges">
+            <span class="hero-badge hero-badge--accent">Software Engineer</span>
+            <span class="hero-badge">IoT Expert</span>
+            <span class="hero-badge">Web Application Developer</span>
+            <span class="hero-badge">Python Developer</span>
+          </div>
+
+          <footer>
+            <a
+              href="#portfolio"
+              class="button scrolly fixed-width-button"
+            >
+              See my portfolio
+            </a>
+            <a
+              href="media/cv.pdf"
+              class="button secondary fixed-width-button"
+            >
+              View my CV
+            </a>
+          </footer>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="two">
+        <div class="container">
+          <header>
+            <h2>Case Studies & Portfolio</h2>
+            <p>
+              Selected products, platforms, and tools I’ve designed and built across AI, IoT,
+              automation, and full-stack web development.
+            </p>
+          </header>
+
+          <!-- Filters -->
+          <div class="portfolio-header-bar">
+            <div class="portfolio-meta">
+              <span class="meta-dot"></span>
+              <span>Focused on AI, IoT &amp; Web applications</span>
+            </div>
+            <div class="portfolio-filters" data-portfolio-filters>
+              <button class="filter-pill is-active" data-filter="all">All</button>
+              <button class="filter-pill" data-filter="ai">AI &amp; Agents</button>
+              <button class="filter-pill" data-filter="iot">IoT &amp; Automation</button>
+              <button class="filter-pill" data-filter="others">Others</button>
+            </div>
+          </div>
+
+          <div class="portfolio-grid">
+
+            <!-- EmployerSupport -->
+            <section class="project-group"
+                     data-category="ai"
+                     data-project-id="employersupport">
+              <div class="project-group-inner">
+                <div class="project-content">
+                  <div class="project-kicker-row">
+                    <span class="project-kicker">Employer Support</span>
+                  </div>
+                  <p class="project-description">
+                  An AI-powered HR legal solution tailored for Australian businesses, designed to simplify and streamline workplace compliance and legal processes.
+                  </p>
+
+                  <div class="project-cta-row">
+                    <a href="https://www.employersupport.org/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener">
+                      employersupport.org
+                    </a>
+                    <button class="project-cta"
+                            type="button"
+                            data-project-open="employersupport">
+                      More details
+                    </button>
+                  </div>
                 </div>
 
-                <div class="bottom">
-
+                <div class="project-gallery">
+                  <div class="project-card default-carousel" data-project-open="employersupport">
+                    <div class="carousel-container" data-default-carousel="employersupport">
+                      <img src="images/portfolio/employersupport/dashboard.png" alt="">
+                      <img src="images/portfolio/employersupport/employeecenter.png" alt="">
+                      <img src="images/portfolio/employersupport/aiagent.png" alt="">
+                    </div>
+                  </div>
                 </div>
 
+              </div>
+
+              <!-- Hidden content used ONLY in the modal bottom -->
+              <div class="project-modal-content" data-project-modal-content="employersupport">
+                <ul class="project-feature-list">
+                  <li>A cluster of AI agents which guides user through generating of employment contracts.</li>
+                  <li>AI agent specialized in finding relevant modern award.</li>
+                  <li>AI agent specialized in finding relevant pay rate.</li>
+                  <li>Connects users with qualified Australian employment lawyers for tailored legal advice and representation. Users can browse expert profiles, view their areas of specialisation, hourly rates and can book an appointment</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- MarkeeterAI -->
+            <section class="project-group"
+                     data-category="ai"
+                     data-project-id="markeeterai">
+              <div class="project-group-inner">
+                <div class="project-content">
+                  <div class="project-kicker-row">
+                    <span class="project-kicker">MarkeeterAI</span>
+                  </div>
+                  <p class="project-description">
+                    AI-powered content generation platform for marketing teams and businesses.
+                  </p>
+
+                  <div class="project-cta-row">
+                    <a href="https://www.markeeterai.com/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener">
+                      markeeterai.com
+                    </a>
+                    <button class="project-cta"
+                            type="button"
+                            data-project-open="markeeterai">
+                      More details
+                    </button>
+                  </div>
+                </div>
+
+                <div class="project-gallery">
+                  <div class="project-card default-carousel" data-project-open="markeeterai">
+                    <div class="carousel-container" data-default-carousel="markeeterai">
+                      <img src="images/portfolio/markeeterai/agent.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hidden content used ONLY in the modal bottom -->
+              <div class="project-modal-content" data-project-modal-content="markeeterai">
+                <ul class="project-feature-list">
+                  <li>Extracts data from the web</li>
+                  <li>Learns from user data</li>
+                  <li>Creates quality content</li>
+                  <li>Designs Canva-style assets</li>
+                  <li>Schedules content behind the scenes</li>
+                </ul>
+              </div>
+            </section>
+
+
+            <!-- Chat2IoT -->
+            <section class="project-group"
+                     data-category="ai iot"
+                     data-project-id="chat2iot">
+              <div class="project-group-inner">
+                <div class="project-content">
+                  <div class="project-kicker-row">
+                    <span class="project-kicker">Chat2IoT</span>
+                  </div>
+                  <p class="project-description">
+                    An AI agent for monitoring, controlling and scheduling IoT systems
+                  </p>
+
+                  <div class="project-cta-row">
+                    <a href="https://chat2iot.com/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener">
+                      chat2iot.com
+                    </a>
+                    <button class="project-cta"
+                            type="button"
+                            data-project-open="chat2iot">
+                      More details
+                    </button>
+                  </div>
+                </div>
+
+                <div class="project-gallery">
+                  <div class="project-card default-carousel" data-project-open="chat2iot">
+                    <div class="carousel-container" data-default-carousel="chat2iot">
+                      <img src="images/portfolio/chat2iot/agent.png" alt="">
+                    </div>
+                  </div>
+                </div>
+
+              <!-- Hidden content used ONLY in the modal bottom -->
+              <div class="project-modal-content" data-project-modal-content="chat2iot">
+
+                <ul class="project-feature-list">
+                  <li>Easily linking IoT devices and platforms through chat. User can just mention the platform they are using, and Chat2iot will guide through the connection process step by step.</li>
+                  <li>Once connected, you can start controlling devices, creating rules, configuring dashboards, generating reports and setting up notifications — all by chatting</li>
+                  <li>User gets update with real-time status checks and notifications through chat. User can request status updates or ask for reports at any time.</li>
+                </ul>
+              </div>
+            </section>
+
+
+            <!-- Recessd BAS -->
+            <section class="project-group"
+                     data-category="iot"
+                     data-project-id="recessd">
+              <div class="project-group-inner">
+                <div class="project-content">
+                  <div class="project-kicker-row">
+                    <span class="project-kicker">RecessD Automation</span>
+                  </div>
+                  <p class="project-description">
+                    The worlds first wireless Building Automation System.
+                  </p>
+
+                  <div class="project-cta-row">
+                    <a href="https://www.recessd.com/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener">
+                      recessd.com
+                    </a>
+                    <button class="project-cta"
+                            type="button"
+                            data-project-open="recessd">
+                      More details
+                    </button>
+                  </div>
+                </div>
+
+                <div class="project-gallery">
+                  <div class="project-card default-carousel" data-project-open="markeeterai">
+                    <div class="carousel-container" data-default-carousel="markeeterai">
+                      <img src="images/portfolio/rcs/dashboard.png" alt="">
+                      <img src="images/portfolio/rcs/device-management.png" alt="">
+                      <img src="images/portfolio/rcs/reporting.png" alt="">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Hidden content used ONLY in the modal bottom -->
+              <div class="project-modal-content" data-project-modal-content="recessd">
+
+                <ul class="project-feature-list">
+                  <li>Control of HVAC, Motors, Relays, PLCs, Lighting, and other equipments</li>
+                  <li>Users can access control interface through any device using online control panel.</li>
+                  <li>Minimize energy consumption via custom scheduling and AI-driven optimization.</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Water Level Monitoring -->
+            <section class="project-group"
+                     data-category="iot"
+                     data-project-id="wlms">
+              <div class="project-group-inner">
+                <div class="project-content">
+                  <div class="project-kicker-row">
+                    <span class="project-kicker">Water Level Monitoring System</span>
+                  </div>
+                  <p class="project-description">
+                    Real-time platform for monitoring water levels and environmental metrics
+                    across remote sites with alerting, dashboards, and reporting.
+                  </p>
+                  <div class="project-cta-row">
+                    <button class="project-cta"
+                            type="button"
+                            data-project-open="wlms">
+                      More details
+                    </button>
+                  </div>
+                </div>
+
+                <div class="project-gallery">
+                  <div class="project-card default-carousel" data-project-open="wlms">
+                    <div class="carousel-container" data-default-carousel="wlms">
+                      <img src="images/portfolio/wlms/dashboard.png" alt="">
+                      <img src="images/portfolio/wlms/real-time-monitoring.png" alt="">
+                      <img src="images/portfolio/wlms/reporting.png" alt="">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Hidden content used ONLY in the modal bottom -->
+              <div class="project-modal-content" data-project-modal-content="wlms">
+
+                <ul class="project-feature-list">
+                  <li>Monitor device locations</li>
+                  <li>Monitor real time data</li>
+                  <li>Generate reports</li>
+                  <li>Configure device remotly</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Appointment Scheduling System -->
+            <section class="project-group"
+                     data-category="others"
+                     data-project-id="appointments">
+              <div class="project-group-inner">
+                <div class="project-content">
+                  <div class="project-kicker-row">
+                    <span class="project-kicker">Appointment Scheduling System</span>
+                  </div>
+                  <p class="project-description">
+                    Automating appointments scheduling based on user schedule and criteria.
+                  </p>
+
+                  <div class="project-cta-row">
+                    <button class="project-cta"
+                            type="button"
+                            data-project-open="appointments">
+                      More details
+                    </button>
+                  </div>
+                </div>
+
+                <div class="project-gallery">
+                  <div class="project-card default-carousel" data-project-open="appointments">
+                    <div class="carousel-container" data-default-carousel="appointments">
+                      <img src="images/portfolio/asa/appointments.png" alt="">
+                      <img src="images/portfolio/asa/availability-management.png" alt="">
+                      <img src="images/portfolio/asa/rest-api.png" alt="">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+          </div>
+        </div>
+
+
+        <!-- Hidden content used ONLY in the modal bottom -->
+        <div class="project-modal-content" data-project-modal-content="appointments">
+
+          <ul class="project-feature-list">
+            <li>Set availability and preferences</li>
+            <li>Automatic booking of appointment</li>
+            <li>Management of booked appointments</li>
+            <li>REST API's for 3rd party integration</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Modal for project details & carousel -->
+      <div id="project-modal" class="project-modal" aria-hidden="true">
+        <div class="project-modal-backdrop" data-project-close></div>
+        <div class="project-modal-dialog" role="dialog" aria-modal="true">
+          <button class="project-modal-close" type="button" title="Close" data-project-close>
+            ✕
+          </button>
+
+          <div class="project-modal-header">
+            <div>
+              <div class="project-modal-kicker" id="project-modal-kicker"></div>
+              <h3 class="project-modal-title" id="project-modal-title"></h3>
+              <p class="project-modal-subtitle" id="project-modal-subtitle"></p>
             </div>
+          </div>
 
-        <!-- Main -->
-            <div id="main">
-
-                <!-- Intro -->
-                    <section id="top" class="one dark cover">
-                        <div class="container bg-text">
-
-                            <header>
-                                <h2 class="alt">Hi, I'm Kamran</h2>
-                                <p>Software Engineer | IoT Expert | Web Application Developer | Python Developer</p>
-                            </header>
-
-
-                            <footer>
-                                <a href="#portfolio" class="button scrolly fixed-width-button">See my portfolio</a>
-                                <a href="media/cv.pdf" class="button scrolly fixed-width-button">See my CV</a>
-                            </footer>
-
-                        </div>
-                    </section>
-
-                <!-- Portfolio -->
-                    <section id="portfolio" class="two">
-                        <div class="container">
-
-                            <header>
-                                <h2>Portfolio</h2>
-                            </header>
-
-                            <p>MarkeeterAI : <a href="https://markeeterai.com/">https://www.markeeterai.com/</a></p>
-
-                            <div class="row">
-                                <div class="col-12 col-12-mobile">
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/markeeterai/agent.png" alt="" /></a>
-                                        <header>
-                                            <h3>Content Generation</h3>
-                                        </header>
-                                    </article>
-                                </div>
-                            </div>
-
-                            <br>
-                            <br>
-                            <br>
-
-                            <p>Chat2iot : <a href="https://chat2iot.com/">https://www.chat2iot.com/</a></p>
-
-                            <div class="row">
-                                <div class="col-12 col-12-mobile">
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/chat2iot/agent.png" alt="" /></a>
-                                        <header>
-                                            <h3>AI Agent</h3>
-                                        </header>
-                                    </article>
-                                </div>
-                            </div>
-
-                            <br>
-                            <br>
-                            <br>
-
-                            <p>Recessd Building Automation System : <a href="https://www.recessd.com/">https://www.recessd.com/</a></p>
-
-                            <div class="row">
-                                <div class="col-12 col-12-mobile">
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/rcs/dashboard.png" alt="" /></a>
-                                        <header>
-                                            <h3>Dashboard</h3>
-                                        </header>
-                                    </article>
-                                </div>
-                                <div class="col-12 col-12-mobile">
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/rcs/device-management.png" alt="" /></a>
-                                        <header>
-                                            <h3>Device Management</h3>
-                                        </header>
-                                    </article>
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/rcs/reporting.png" alt="" /></a>
-                                        <header>
-                                            <h3>client Side Reporting</h3>
-                                        </header>
-                                    </article>
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/rcs/server-side-reporting.png" alt="" /></a>
-                                        <header>
-                                            <h3>Server Side Reporting</h3>
-                                        </header>
-                                    </article>
-                                </div>
-                            </div>
-
-                            <br>
-                            <br>
-                            <br>
-
-                            <p>Water Level Monitoring System</p>
-
-                            <div class="row">
-                                <div class="col-12 col-12-mobile">
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/wlms/dashboard.png" alt="" /></a>
-                                        <header>
-                                            <h3>Dashboard</h3>
-                                        </header>
-                                    </article>
-                                </div>
-                                <div class="col-12 col-12-mobile">
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/wlms/real-time-monitoring.png" alt="" /></a>
-                                        <header>
-                                            <h3>Real Time Data Monitoring</h3>
-                                        </header>
-                                    </article>
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/wlms/reporting.png" alt="" /></a>
-                                        <header>
-                                            <h3>Reporting</h3>
-                                        </header>
-                                    </article>
-                                </div>
-                            </div>
-
-                            <br>
-                            <br>
-                            <br>
-
-                            <p>Apointment Scheduling System</p>
-
-                            <div class="row">
-                                <div class="col-12 col-12-mobile">
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/asa/appointments.png" alt="" /></a>
-                                        <header>
-                                            <h3>Appointments</h3>
-                                        </header>
-                                    </article>
-                                </div>
-                                <div class="col-12 col-12-mobile">
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/asa/availability-management.png" alt="" /></a>
-                                        <header>
-                                            <h3>Availabitilty Management</h3>
-                                        </header>
-                                    </article>
-                                    <article class="item">
-                                        <a href="#" class="image fit"><img src="images/portfolio/asa/rest-api.png" alt="" /></a>
-                                        <header>
-                                            <h3>REST API's</h3>
-                                        </header>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                <!-- About Me -->
-                    <section id="about" class="three">
-                        <div class="container">
-
-                            <header>
-                                <h2>About Me: A Software Engineer with Wanderlust</h2>
-                            </header>
-
-                            <a href="#" class="image featured about-me-image"><img src="images/profile1.jpg" alt=""/></a>
-
-                            <h3>Who Am I?</h3>
-                            <p>
-                              Hi there! I'm a software engineer by profession, but in my heart, I'm a globe-trotting adventurer. 
-                              When I'm not buried in code, you'll find me in a different time zone, sampling local cuisine, and diving into new cultures.
-                            </p>
-
-                            <h3></i> My Life's Mission</h3>
-                            <p>
-                              My ultimate goal? To become a full-time digital nomad, traveling from city to city, country to country, 
-                              while breaking down code barriers. Imagine fixing a bug while sitting in a café in Paris, or deploying a 
-                              new feature while watching the sunset in Bali—that's the life I'm working toward!
-                            </p>
-
-                            <h3>Professional Interests</h3>
-                            <p>
-                                Coding: The language of the future.<br>
-                                IoT: Connecting the physical world to the digital realm.<br>
-                                Backend & Frontend: Creating seamless user experiences from start to finish.<br>
-                                Cloud Computing: Powering scalable and flexible solutions.<br>
-                                Embedded Systems: Where software meets hardware.<br>
-                                Machine Learning & IoT: Merging smart algorithms with smart devices.<br>
-                            </p>
-
-                            <h3>Personal Interests</h3>
-                            <p>
-                                Solo Traveling: The journey of self-discovery.<br>
-                                Cultural Exchange: Meeting locals and sharing stories.<br>
-                                Adventures: Every new place is a new story waiting to unfold.<br>
-                            </p>
-
-                            <h3>Favorite Quote</h3>
-                            <i>"Not all those who wander are lost." — J.R.R. Tolkien</i>
-                            <p></p>
-
-                            <h3>Let's Build Something Together</h3>
-                            <p>
-                                If you're interested in collaborating on a project, or if your company is in search of a software engineer who can code
-                                from anywhere in the world, let's get in touch!
-                            </p>
-                          </section>
-
-                        </div>
-                    </section>
-
+          <div class="project-modal-carousel">
+            <button class="carousel-nav carousel-nav--prev" type="button" data-carousel-prev>
+              ‹
+            </button>
+            <div class="carousel-track">
+              <img id="carousel-image" src="" alt="" />
             </div>
+            <button class="carousel-nav carousel-nav--next" type="button" data-carousel-next>
+              ›
+            </button>
+          </div>
 
-        <!-- Footer -->
-            <div id="footer">
+          <div class="project-modal-caption">
+            <h4 id="carousel-caption-title"></h4>
+            <div id="carousel-caption-text"></div>
+          </div>
+        </div>
+      </div>
 
-                <!-- Copyright -->
-                    <ul class="copyright">
-                        <li>&copy; kamran890. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    </ul>
 
+
+      <!-- About Me -->
+      <section id="about" class="three">
+        <div class="container">
+          <header>
+            <h2>About Me: A Software Engineer with Wanderlust</h2>
+            <p>
+              I build scalable software systems and love exploring the world and meeting new people.
+            </p>
+          </header>
+
+          <div class="about-layout">
+            <a href="#" class="image featured about-me-image">
+              <img
+                src="images/profile1.jpg"
+                alt="Kamran enjoying travel and remote work"
+              />
+            </a>
+
+            <div class="about-text">
+              <h3>Who Am I?</h3>
+              <p>
+                Hi there! I'm a software engineer by profession, but in my heart, I'm a  adventurer. When I'm not buried in code, you'll find me
+                somewhere outdoor walking on a random paths, exploring forest trail, or camping in wilderness.
+              </p>
+
+              <h3>My Life's Mission</h3>
+              <p>
+                My ultimate goal? To explore myself and become who I really am!
+              </p>
+
+              <h3>Professional Interests</h3>
+              <ul class="about-list">
+                <li>AI agents: Leveraging the power of LLM's to build AI agents who can do can create real buisness value.</li>
+                <li>Coding: Designing clean, maintainable systems.</li>
+                <li>IoT: Connecting the physical world to the digital realm.</li>
+                <li>
+                  Backend &amp; Frontend: Creating seamless experiences from database to UI.
+                </li>
+                <li>Cloud Computing: Building scalable and resilient solutions.</li>
+                <li>Embedded Systems: Where software meets hardware.</li>
+              </ul>
+
+              <h3>Personal Interests</h3>
+              <ul class="about-list">
+                <li>Solo Traveling: The journey of self-discovery.</li>
+                <li>Cultural Exchange: Meeting locals and sharing stories.</li>
+                <li>Adventures: Every new place is a new story.</li>
+              </ul>
+
+              <div class="quote">
+                “It’s good to feel everything — the cold, the heat, the joy, the pain.
+It’s the contrast that shapes life.” — Kamran
+              </div>
+
+              <div class="about-cta">
+                <p>
+                  If you're interested in collaborating on a project or your company
+                  is looking for a software engineer who can work from anywhere in the
+                  world, let's get in touch.
+                </p>
+                <a href="#top" class="button secondary scrolly fixed-width-button">
+                  Back to top
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
-            <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+    <!-- Footer -->
+    <div id="footer">
+      <ul class="copyright">
+        <li>&copy; kamran890. All rights reserved.</li>
+        <li>
+          Original base design:
+          <a href="http://html5up.net" target="_blank" rel="noopener">HTML5 UP</a>
+        </li>
+      </ul>
+    </div>
 
-    </body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+    ></script>
+
+    <script>
+      (function () {
+        /* ---------- Filters (optional, if you added them) ---------- */
+        const filterBar = document.querySelector("[data-portfolio-filters]");
+        const groups = Array.from(document.querySelectorAll(".project-group"));
+
+        if (filterBar) {
+          const pills = Array.from(filterBar.querySelectorAll("[data-filter]"));
+
+          filterBar.addEventListener("click", function (e) {
+            const btn = e.target.closest("[data-filter]");
+            if (!btn) return;
+
+            const filter = btn.dataset.filter;
+            pills.forEach((p) => p.classList.toggle("is-active", p === btn));
+
+            groups.forEach((group) => {
+              const cats = (group.dataset.category || "").split(/\s+/);
+              const show = filter === "all" || cats.includes(filter);
+              group.style.display = show ? "" : "none";
+            });
+          });
+        }
+
+        /* ---------- Modal + Carousel ---------- */
+        const modal = document.getElementById("project-modal");
+        if (!modal) return;
+
+        const dialog = modal.querySelector(".project-modal-dialog");
+        const closeEls = modal.querySelectorAll("[data-project-close]");
+        const imgEl = modal.querySelector("#carousel-image");
+        const titleEl = modal.querySelector("#project-modal-title");
+        const kickerEl = modal.querySelector("#project-modal-kicker");
+        const subtitleEl = modal.querySelector("#project-modal-subtitle");
+        const capTitleEl = modal.querySelector("#carousel-caption-title");
+        const capTextEl = modal.querySelector("#carousel-caption-text");
+        const prevBtn = modal.querySelector("[data-carousel-prev]");
+        const nextBtn = modal.querySelector("[data-carousel-next]");
+
+        let slides = [];
+        let index = 0;
+        let lastFocused = null;
+
+        function collectSlides(projectId) {
+          const group = document.querySelector(
+            '.project-group[data-project-id="' + projectId + '"]'
+          );
+          if (!group) return [];
+
+          const imgs = group.querySelectorAll(".project-card img");
+          const result = [];
+          imgs.forEach((img) => {
+            result.push({
+              src: img.getAttribute("src"),
+              alt: img.getAttribute("alt") || ""
+            });
+          });
+          return result;
+        }
+
+        function getProjectContent(projectId) {
+          const content = document.querySelector(
+            '.project-modal-content[data-project-modal-content="' + projectId + '"]'
+          );
+          return content ? content.innerHTML : "";
+        }
+
+        function openModal(projectId) {
+          slides = collectSlides(projectId);
+          if (!slides.length) return;
+
+          const group = document.querySelector(
+            '.project-group[data-project-id="' + projectId + '"]'
+          );
+          const groupTitle = group.querySelector(".project-title") || group.querySelector(".project-kicker");
+          const groupDesc = group.querySelector(".project-description");
+          const groupKicker = group.querySelector(".project-kicker");
+
+          // Top texts
+          titleEl.textContent = groupTitle ? groupTitle.textContent.trim() : "";
+          subtitleEl.textContent = groupDesc ? groupDesc.textContent.trim() : "";
+          kickerEl.textContent = groupKicker ? groupKicker.textContent.trim() : "";
+
+          // Bottom content (same for all slides)
+          capTextEl.innerHTML = getProjectContent(projectId);
+
+          // Start with first image
+          index = 0;
+          updateSlide();
+
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+
+          if (dialog) dialog.focus();
+        }
+
+        function closeModal() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+
+          if (lastFocused && typeof lastFocused.focus === "function") {
+            lastFocused.focus();
+          }
+        }
+
+        function updateSlide() {
+          if (!slides.length) return;
+          const slide = slides[index];
+          imgEl.src = slide.src;
+          imgEl.alt = slide.alt;
+        }
+
+        function nextSlide() {
+          if (!slides.length) return;
+          index = (index + 1) % slides.length;
+          updateSlide();
+        }
+
+        function prevSlide() {
+          if (!slides.length) return;
+          index = (index - 1 + slides.length) % slides.length;
+          updateSlide();
+        }
+
+        // open from buttons or images (anything with data-project-open)
+        document.addEventListener("click", function (e) {
+          const trigger = e.target.closest("[data-project-open]");
+          if (!trigger) return;
+          const id = trigger.getAttribute("data-project-open");
+          lastFocused = trigger;
+          openModal(id);
+          e.preventDefault(); // prevent the image link from navigating
+        });
+
+        // close buttons + backdrop
+        closeEls.forEach((el) =>
+          el.addEventListener("click", function () {
+            closeModal();
+          })
+        );
+
+        // Esc key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+
+        // carousel nav
+        if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+        if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+      })();
+    </script>
+
+    <script>
+    (function() {
+      const carousels = document.querySelectorAll("[data-default-carousel]");
+
+      carousels.forEach(carousel => {
+        const imgs = carousel.querySelectorAll("img");
+        let index = 0;
+
+        // activate first image
+        imgs[0].classList.add("active");
+
+        setInterval(() => {
+          imgs[index].classList.remove("active");
+          index = (index + 1) % imgs.length;
+          imgs[index].classList.add("active");
+        }, 3000); // change every 3 seconds
+      });
+    })();
+    </script>
+
+
+
+
+  </body>
 </html>
