@@ -22,7 +22,7 @@ sudo apt-get install busybox
 ```
 
 <p align="center">
-  <img src="../images/blog/busybox/install_ubuntu.png" style="width:50%;" alt="install_ubuntu"/><br>
+  <img src="images/blog/busybox/install_ubuntu.png" style="width:50%;" alt="install_ubuntu"/><br>
 </p>
 
 ### B. Using Docker:
@@ -41,7 +41,7 @@ docker run -it busybox
 ```
 
 <p align="center">
-  <img src="../images/blog/busybox/install_docker.png" style="width:50%;" alt="install_docker"/><br>
+  <img src="images/blog/busybox/install_docker.png" style="width:50%;" alt="install_docker"/><br>
 </p>
 
 
@@ -53,14 +53,14 @@ docker run -it busybox
 
 
 <p align="center">
-  <img src="../images/blog/busybox/shell_ubuntu.png" style="width:50%;" alt="shell_ubuntu"/><br>
+  <img src="images/blog/busybox/shell_ubuntu.png" style="width:50%;" alt="shell_ubuntu"/><br>
 </p>
 
 2. **Docker Shell Access**:
 - Use `docker run -it busybox` for shell access.
 
 <p align="center">
-  <img src="../images/blog/busybox/shell_docker.png" style="width:50%;" alt="shell_docker"/><br>
+  <img src="images/blog/busybox/shell_docker.png" style="width:50%;" alt="shell_docker"/><br>
 </p>
 
 ## Trying Out Some Commands
@@ -68,7 +68,7 @@ docker run -it busybox
 - Try `ls`, `touch`, `mv`.
 
 <p align="center">
-  <img src="../images/blog/busybox/commands.png" style="width:50%;" alt="commands"/><br>
+  <img src="images/blog/busybox/commands.png" style="width:50%;" alt="commands"/><br>
 </p>
 
 ## Comparing Commands with GNU Coreutils
@@ -86,10 +86,10 @@ docker run -it busybox
 - Some GNU Coreutils commands may have no BusyBox equivalent or offer reduced functionality.
 
 <p align="center">
-  <img src="../images/blog/busybox/mv_gnu.png" style="width:50%;" alt="mv_busybox"/><br>
+  <img src="images/blog/busybox/mv_gnu.png" style="width:50%;" alt="mv_busybox"/><br>
 </p>
 <p align="center">
-  <img src="../images/blog/busybox/mv_busybox.png" style="width:50%;" alt="mv_busybox"/><br>
+  <img src="images/blog/busybox/mv_busybox.png" style="width:50%;" alt="mv_busybox"/><br>
 </p>
 
 

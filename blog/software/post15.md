@@ -4,7 +4,7 @@ Object-oriented programming (OOP) several relationships to handle complexity and
 
 
 <p align="center">
-  <img src="../images/blog/relationships/relations_uml.png" style="width:50%;" alt="relations_uml"/>
+  <img src="images/blog/relationships/relations_uml.png" style="width:50%;" alt="relations_uml"/>
   <br>
 </p>
 <p align="center">

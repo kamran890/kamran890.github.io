@@ -1,0 +1,24 @@
+{
+  "name": "Kamran Portfolio",
+  "short_name": "Kamran",
+  "description": "Portfolio of Kamran, software engineer specialized in AI, web, and IoT systems.",
+  "start_url": "/app6/profile/",
+  "scope": "/app6/profile/",
+  "display": "standalone",
+  "background_color": "#fff9f0",
+  "theme_color": "#c2410c",
+  "icons": [
+    {
+      "src": "images/profile1.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "images/profile1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

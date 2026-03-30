@@ -36,10 +36,10 @@ Cycling: You can get bike on rent from Karimabad and ride along the Karakorum hi
 ```
 
 <p align="center">
-  <img src="../images/blog/hunza/hunza1.jpeg" style="width:50%;" alt="hunza1"/><br>
+  <img src="images/blog/hunza/hunza1.jpeg" style="width:50%;" alt="hunza1"/><br>
   <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a></i>
 </p>
 <p align="center">
-  <img src="../images/blog/hunza/hunza2.jpeg" style="width:50%;" alt="hunza2"/><br>
+  <img src="images/blog/hunza/hunza2.jpeg" style="width:50%;" alt="hunza2"/><br>
   <i class="photo-credit">Photo by Sky</i>
 </p>

@@ -9,7 +9,7 @@ Chat2IoT will be offered as a SaaS-based service soon, hosted on the cloud. User
     While signing up, users can connect their IoT platform to Chat2IoT. The tool automatically pulls relevant data from the platform, including information about connected devices and the parameters those devices can control.
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/signup.png" style="width:50%;" alt="signup"/><br>
+        <img src="images/blog/smart-rule-engine/signup.png" style="width:50%;" alt="signup"/><br>
         <i>Figure 1: Sign up & Integration</i>
     </p>
 
@@ -19,7 +19,7 @@ Chat2IoT will be offered as a SaaS-based service soon, hosted on the cloud. User
     Once registered, users can log in and access the chat interface.
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/login.png" style="width:50%;" alt="login"/><br>
+        <img src="images/blog/smart-rule-engine/login.png" style="width:50%;" alt="login"/><br>
         <i>Figure 2: Login</i>
     </p>
 
@@ -28,7 +28,7 @@ Chat2IoT will be offered as a SaaS-based service soon, hosted on the cloud. User
     The core of Chat2IoT is its chat-based management system. Through this interface, users can effortlessly manage their rule engines. For example, users can ask the system to list all existing rule engines, create new ones, or modify or delete existing ones.
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/chat.png" style="width:50%;" alt="chat"/><br>
+        <img src="images/blog/smart-rule-engine/chat.png" style="width:50%;" alt="chat"/><br>
         <i>Figure 3: Chat Interface for Rule Engine</i>
     </p>
 
@@ -65,21 +65,21 @@ Significant progress has been made, including:
     If any information is missing, the system will prompt the user for the necessary details. Once all the information is provided, Chat2IoT will rephrase the rule and ask the user for confirmation to ensure the intent is correctly captured. Upon confirmation, the rule is created and activated.
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/create.png" style="width:50%;" alt="create"/><br>
+        <img src="images/blog/smart-rule-engine/create.png" style="width:50%;" alt="create"/><br>
         <i>Figure 4: Generate Rule Chain</i>
     </p>
 
     Evaluating above rule chain by simulating device. Through following script, temperature is simulated as 70 degrees.
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/simulate_temperature_70.png" style="width:50%;" alt="simulate_temperature_70"/><br>
+        <img src="images/blog/smart-rule-engine/simulate_temperature_70.png" style="width:50%;" alt="simulate_temperature_70"/><br>
         <i>Figure 5: Simulating temperature as 70 degrees</i>
     </p>
 
     We know that based on rule chain we created, heating shall be turned on. Let's see in Thingsboard.
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/thingsboard_heating.png" style="width:50%;" alt="thingsboard_heating"/><br>
+        <img src="images/blog/smart-rule-engine/thingsboard_heating.png" style="width:50%;" alt="thingsboard_heating"/><br>
         <i>Figure 6: Meeting Room 1 Device on Thingsboard</i>
     </p>
 
@@ -88,14 +88,14 @@ Significant progress has been made, including:
     Similarly through following script, temperature is simulated as 76 degrees.
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/simulate_temperature_76.png" style="width:50%;" alt="simulate_temperature_76"/><br>
+        <img src="images/blog/smart-rule-engine/simulate_temperature_76.png" style="width:50%;" alt="simulate_temperature_76"/><br>
         <i>Figure 7: Simulating temperature as 76 degrees</i>
     </p>
 
     We know that based on rule chain we created, now cooling shall be turned on. Let's see in Thingsboard.
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/thingsboard_cooling.png" style="width:50%;" alt="thingsboard_cooling"/><br>
+        <img src="images/blog/smart-rule-engine/thingsboard_cooling.png" style="width:50%;" alt="thingsboard_cooling"/><br>
         <i>Figure 8: Meeting Room 1 Device on Thingsboard</i>
     </p>
 
@@ -112,7 +112,7 @@ Significant progress has been made, including:
 
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/list.png" style="width:50%;" alt="list"/><br>
+        <img src="images/blog/smart-rule-engine/list.png" style="width:50%;" alt="list"/><br>
         <i>Figure 9: List Rule Chains</i>
     </p>
 
@@ -127,7 +127,7 @@ Significant progress has been made, including:
 
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/update.png" style="width:50%;" alt="update"/><br>
+        <img src="images/blog/smart-rule-engine/update.png" style="width:50%;" alt="update"/><br>
         <i>Figure 10: Update Rule Chain</i>
     </p>
 
@@ -142,7 +142,7 @@ Significant progress has been made, including:
 
 
     <p align="center">
-        <img src="../images/blog/smart-rule-engine/delete.png" style="width:50%;" alt="delete"/><br>
+        <img src="images/blog/smart-rule-engine/delete.png" style="width:50%;" alt="delete"/><br>
         <i>Figure 11: Delete Rule Chain</i>
     </p>
 

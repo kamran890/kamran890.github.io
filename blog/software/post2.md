@@ -10,7 +10,7 @@ MVC is a design pattern that divides an application into three main components:
 
 
 <p align="center">
-  <img src="../images/blog/mvc/passive_mvc.png" style="width:30%;" alt="passive_mvc"/>
+  <img src="images/blog/mvc/passive_mvc.png" style="width:30%;" alt="passive_mvc"/>
   <br>
 </p>
 <p align="center">
@@ -82,7 +82,7 @@ controller.update_model("Updated Data")
 ## Implementation Option 1: Pull MVC (Semi-active Model)
 
 <p align="center">
-  <img src="../images/blog/mvc/semi_active_mvc.png" style="width:30%;" alt="semi_active_mvc"/><br>
+  <img src="images/blog/mvc/semi_active_mvc.png" style="width:30%;" alt="semi_active_mvc"/><br>
 </p>
 
 <p align="center">
@@ -160,7 +160,7 @@ controller.update_model("Updated Data")
 ## Implementation Option 2: Push MVC (Active Model)
 
 <p align="center">
-  <img src="../images/blog/mvc/active_mvc.png" style="width:30%;" alt="active_mvc"/><br>
+  <img src="images/blog/mvc/active_mvc.png" style="width:30%;" alt="active_mvc"/><br>
 </p>
 
 <p align="center">
