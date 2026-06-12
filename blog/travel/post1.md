@@ -40,7 +40,3 @@ Bye: Adiós
   <img src="images/blog/alicante/alicante3.JPEG" style="width:50%;" alt="library"/><br>
   <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a></i>
 </p>
-<p align="center">
-  <img src="images/blog/alicante/alicante4.JPEG" style="width:50%;" alt="library"/><br>
-  <i class="photo-credit">Photo by <a href="https://kamran890.github.io">Kamran890</a></i>
-</p>
